@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Valrove</string>
+    <string name="widget_description">Start your cleaning presets or send the robot to its dock</string>
+    <string name="widget_dock">Dock</string>
+    <string name="widget_empty">Save a preset in Valrove to start it from here</string>
+    <string name="tile_label">Valrove</string>
+    <string name="tile_start">Tap to start</string>
+    <string name="tile_empty">No preset yet</string>
+    <string name="app_functions_description">Start cleanings, presets and the dock from your assistant</string>
+</resources>

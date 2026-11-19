@@ -1,0 +1,1 @@
+{"__class":"ValetudoWifiStatus","metaData":{},"state":"connected","details":{"bssid":"00:11:22:33:44:55","ssid":"HomeNetwork","signal":-27,"upspeed":72.2,"frequency":"2.4ghz","ips":["192.168.1.122"]}}

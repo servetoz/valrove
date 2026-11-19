@@ -1,0 +1,12 @@
+{
+  "name": "valrove-icon-renderer",
+  "private": true,
+  "description": "Renders the Valrove icon artwork from valrove-icon.svg (see render.mjs).",
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  }
+}

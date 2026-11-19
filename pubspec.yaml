@@ -1,0 +1,81 @@
+name: valrove
+description: "A spatial, map-first controller for Valetudo-powered robot vacuums."
+publish_to: 'none'
+
+version: 1.0.1+2
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_ui: ^1.11.0
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^3.5.0
+  http: ^1.6.0
+  shared_preferences: ^2.5.6
+  flutter_secure_storage: ^11.2.0
+  bonsoir: ^7.1.6
+  intl: ^0.20.3
+  url_launcher: ^6.3.3
+  package_info_plus: ^10.2.2
+  markdown: ^7.3.1
+  cupertino_ui: ^1.1.6
+  share_plus: ^13.3.1
+  flutter_foreground_task: ^11.0.3
+  flutter_local_notifications: ^23.0.2
+  home_widget: ^0.10.0
+  quick_actions: ^1.1.1
+  path_provider: ^2.1.6
+  speech_to_text: ^7.5.0
+  app_links: ^7.2.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/brand/
+    - assets/licenses/
+    # Valrove's own license, shown on the About page.
+    - LICENSE
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+    - family: JetBrainsMono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/JetBrainsMono-Medium.ttf
+          weight: 500
+
+flutter_launcher_icons:
+  # Artwork rendered from valrove-icon.svg by tool/icons/render.mjs.
+  android: "ic_launcher"
+  ios: true
+  remove_alpha_ios: true
+  image_path_android: "assets/icon/android_legacy.png"
+  image_path_ios: "assets/icon/ios.png"
+  adaptive_icon_background: "#000429"
+  adaptive_icon_foreground: "assets/icon/foreground.png"
+  adaptive_icon_foreground_inset: 0
+  adaptive_icon_monochrome: "assets/icon/monochrome.png"
+  min_sdk_android: 24

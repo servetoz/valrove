@@ -1,0 +1,140 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Talk to Valetudo on the local network. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- mDNS discovery of robots (_valetudo._tcp). -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Following a cleanup in the background (live notification, alerts). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- Haptic feedback on the vibrator (Haptics.kt). -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Voice commands (asked for when the microphone button is used). -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- Voice commands are optional; devices without a microphone are fine. -->
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+
+    <application
+        android:label="Valrove"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:enableOnBackInvokedCallback="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- valrove:// links from the widget, the tile and other apps
+                 (e.g. valrove://command?text=clean+the+kitchen). -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="valrove"/>
+            </intent-filter>
+            <!-- Links are handled by the app (app_links), not as routes. -->
+            <meta-data
+                android:name="flutter_deeplinking_enabled"
+                android:value="false" />
+        </activity>
+        <!-- Follows a running cleanup (cleanup_service.dart). The robot is a
+             device on the local network, hence connectedDevice. -->
+        <service
+            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice"
+            android:stopWithTask="false" />
+        <meta-data
+            android:name="dev.valroveapp.valrove.NOTIFICATION_ICON"
+            android:resource="@drawable/ic_stat_valrove" />
+
+        <!-- Home screen widget with presets. -->
+        <receiver
+            android:name=".PresetWidgetProvider"
+            android:exported="false"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/preset_widget_info" />
+        </receiver>
+
+        <!-- Quick settings tile: starts the first preset. -->
+        <service
+            android:name=".PresetTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_stat_valrove"
+            android:label="@string/tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- Functions assistants such as Gemini can call (Android 16+). The
+             service class and the XML are generated from
+             assistant/BaseValroveAppFunctionService.kt. -->
+        <service
+            android:name="dev.valroveapp.valrove.assistant.ValroveAppFunctionService"
+            android:exported="true"
+            android:permission="android.permission.BIND_APP_FUNCTION_SERVICE"
+            tools:targetApi="36">
+            <property
+                android:name="android.app.appfunctions.schema"
+                android:value="app_functions_schema.xsd" />
+            <property
+                android:name="android.app.appfunctions.v2"
+                android:value="valrove_app_functions.xml" />
+            <intent-filter>
+                <action android:name="android.app.appfunctions.AppFunctionService" />
+            </intent-filter>
+        </service>
+        <property
+            android:name="android.app.appfunctions.app_metadata"
+            android:resource="@xml/app_metadata" />
+
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- The phone's speech recognizer, for voice commands. -->
+        <intent>
+            <action android:name="android.speech.RecognitionService"/>
+        </intent>
+    </queries>
+</manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- What assistants are told about Valrove's AppFunctions (assistant/*.kt). -->
+<AppFunctionAppMetadata xmlns:appfn="http://schemas.android.com/apk/androidx.appfunctions"
+    appfn:instructions="Controls the user's robot vacuum (running Valetudo) over the home network: starts cleaning rooms, the whole home or saved presets, pauses, resumes, stops, sends it to its dock, finds it and reports its status.
+Operational patterns:
+  - For 'clean the kitchen' style requests call 'cleanRooms' with the room names as the user said them; names are matched leniently and across languages.
+  - If 'cleanRooms' reports an unknown room, call 'listRooms' and ask the user which room they meant.
+  - For named routines such as 'after dinner' call 'listPresets' if unsure, then 'startPreset'.
+  - Use 'getRobotStatus' to answer questions about the robot or the battery.
+Constraints:
+  - Only one job runs at a time; a busy robot must be paused, stopped or sent home first. Ask the user before stopping a running job.
+  - The robot is only reachable while the phone is on the same network."
+    appfn:displayDescription="@string/app_functions_description" />

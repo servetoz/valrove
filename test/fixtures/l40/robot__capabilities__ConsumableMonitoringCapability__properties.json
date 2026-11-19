@@ -1,0 +1,1 @@
+{"availableConsumables":[{"type":"brush","subType":"main","unit":"minutes","maxValue":18000},{"type":"brush","subType":"side_right","unit":"minutes","maxValue":12000},{"type":"filter","subType":"main","unit":"minutes","maxValue":9000},{"type":"cleaning","subType":"sensor","unit":"minutes","maxValue":1800},{"type":"cleaning","subType":"wheel","unit":"minutes","maxValue":1800}]}

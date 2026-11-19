@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1254 1254" width="1254" height="1254" role="img" aria-labelledby="title">
+  <title id="title">Valrove app icon</title>
+  <defs>
+    <path id="puck-outline"
+      d="M 998.42 618.2
+        C 998.44 631.5 997.68 644.8 996.2 658.01
+        C 994.73 671.22 992.54 684.33 989.69 697.29
+        C 986.85 710.25 983.34 723.04 979.18 735.6
+        C 975.02 748.16 970.2 760.49 964.76 772.5
+        C 959.32 784.52 953.26 796.23 946.66 807.6
+        C 940.07 818.96 932.93 829.99 925.32 840.66
+        C 917.71 851.32 909.62 861.62 901.06 871.5
+        C 892.49 881.38 883.45 890.83 873.94 899.77
+        C 864.44 908.72 854.46 917.16 844.09 925.04
+        C 833.71 932.93 822.92 940.26 811.79 947.01
+        C 800.65 953.75 789.18 959.92 777.41 965.46
+        C 765.64 971.01 753.59 975.92 741.3 980.16
+        C 729.01 984.39 716.48 987.95 703.8 990.79
+        C 691.12 993.63 678.29 995.75 665.38 997.15
+        C 652.47 998.55 639.48 999.23 626.5 999.19
+        C 613.52 999.15 600.54 998.38 587.65 996.9
+        C 574.76 995.41 561.95 993.21 549.3 990.28
+        C 536.66 987.36 524.18 983.72 511.96 979.38
+        C 499.73 975.04 487.76 970 476.1 964.33
+        C 464.43 958.65 453.09 952.34 442.09 945.48
+        C 431.1 938.62 420.45 931.21 410.18 923.31
+        C 399.9 915.41 390 907.01 380.52 898.15
+        C 371.04 889.29 361.98 879.96 353.41 870.18
+        C 344.83 860.41 336.73 850.19 329.14 839.59
+        C 321.56 828.99 314.47 818 307.91 806.69
+        C 301.35 795.37 295.3 783.74 289.81 771.81
+        C 284.32 759.88 279.39 747.66 275.09 735.19
+        C 270.79 722.73 267.13 710.01 264.15 697.11
+        C 261.17 684.21 258.88 671.14 257.3 657.96
+        C 255.71 644.78 254.83 631.5 254.67 618.2
+        C 254.5 604.9 255.05 591.59 256.32 578.34
+        C 257.59 565.09 259.58 551.92 262.27 538.89
+        C 264.95 525.86 268.33 512.98 272.36 500.32
+        C 276.39 487.66 281.06 475.22 286.33 463.04
+        C 291.6 450.87 297.48 438.98 303.94 427.42
+        C 310.4 415.86 317.43 404.64 325.03 393.82
+        C 332.62 383 340.78 372.59 349.44 362.65
+        C 358.11 352.71 367.29 343.23 376.93 334.26
+        C 386.57 325.3 396.66 316.84 407.15 308.93
+        C 417.64 301.01 428.51 293.63 439.74 286.84
+        C 450.96 280.04 462.53 273.83 474.41 268.28
+        C 486.28 262.72 498.45 257.82 510.86 253.65
+        C 523.27 249.47 535.92 246.02 548.7 243.3
+        C 561.49 240.58 574.43 238.6 587.42 237.32
+        C 600.41 236.05 613.46 235.5 626.5 235.67
+        C 639.54 235.84 652.55 236.74 665.47 238.39
+        C 678.38 240.04 691.19 242.44 703.82 245.52
+        C 716.45 248.61 728.9 252.39 741.12 256.77
+        C 753.34 261.16 765.34 266.15 777.05 271.75
+        C 788.76 277.34 800.19 283.54 811.22 290.38
+        C 822.25 297.21 832.9 304.69 843.07 312.75
+        C 853.25 320.81 862.96 329.45 872.24 338.51
+        C 881.53 347.57 890.39 357.05 898.88 366.86
+        C 907.38 376.66 915.51 386.79 923.22 397.27
+        C 930.93 407.75 938.21 418.59 944.93 429.8
+        C 951.65 441.02 957.81 452.61 963.34 464.53
+        C 968.87 476.44 973.77 488.68 978.07 501.16
+        C 982.36 513.63 986.03 526.35 989.05 539.25
+        C 992.06 552.14 994.41 565.22 995.99 578.41
+        C 997.58 591.6 998.39 604.9 998.42 618.2
+        Z"/>
+    <clipPath id="puck-clip" clipPathUnits="userSpaceOnUse">
+      <use xlink:href="#puck-outline"/>
+    </clipPath>
+    <path id="v-outline" fill-rule="evenodd" clip-rule="evenodd"
+      d="M 807.87 473.17
+        C 829.87 471.42 852.13 476.04 868.96 490.22
+        C 876.44 496.52 882.85 504.71 885.86 513.88
+        C 889.47 524.92 888.15 537.39 883.6 548.12
+        C 879.82 557.04 873.81 564.75 868.08 572.6
+        C 862.44 580.34 857.06 588.21 851.59 596.03
+        C 840.65 611.68 829.31 627.13 818.1 642.64
+        C 773.38 704.49 730.53 767.35 685.44 829.1
+        C 674.23 844.45 662.88 859.74 648.43 871.81
+        C 633.21 884.53 614.54 893.68 594.86 898.07
+        C 571.97 903.16 547.7 901.81 526.25 893.46
+        C 508.32 886.48 492.36 874.6 478.39 861.06
+        C 450.95 834.47 431.2 801.47 409.82 769.76
+        C 388.48 738.12 365.53 707.77 343.92 676.53
+        C 333.08 660.86 322.58 644.96 310.83 629.67
+        C 298.91 614.14 285.71 599.23 266.61 593.39
+        C 258.89 591.03 250.22 590.15 248.02 584.78
+        C 246.32 580.65 248.47 573.86 249.39 567.15
+        C 250.29 560.61 250.03 554.16 251.99 549.08
+        C 254.32 543.01 259.82 538.91 265.8 535.4
+        C 284.95 524.17 308.95 519.1 331.13 522.56
+        C 351.01 525.66 369.43 535.63 384.58 548.93
+        C 398.78 561.39 410.1 576.78 421.61 591.88
+        C 444.61 622.05 468.33 651.09 491.03 681.52
+        C 502.43 696.8 513.57 712.44 526.13 726.13
+        C 529.28 729.57 532.52 732.89 536.95 735.15
+        C 541.96 737.71 548.48 738.92 553.94 738.25
+        C 564.01 737 570.47 729.34 576.77 721.58
+        C 600.94 691.77 622.78 660.42 644.66 629.17
+        C 666.57 597.88 688.53 566.68 711.56 535.94
+        C 722.98 520.69 734.67 505.56 749.8 494.42
+        C 766.34 482.24 786.99 474.83 807.87 473.17
+        Z
+        M 796.07 501.97
+        C 794.95 502.02 794.02 504.09 793.42 505.97
+        C 792.73 508.12 792.49 510.01 792.05 511.91
+        C 791.26 515.27 789.84 518.64 788.22 521.88
+        C 785.29 527.77 781.74 533.23 777.22 537.91
+        C 772.57 542.7 766.9 546.66 761.03 549.59
+        C 757.89 551.16 754.69 552.44 750.93 553.17
+        C 747.12 553.91 742.73 554.08 741.79 557.05
+        C 741.49 557.99 741.53 559.21 742.35 559.84
+        C 742.95 560.3 743.94 560.45 744.87 560.62
+        C 746.96 561 748.7 561.47 750.44 562.02
+        C 753.78 563.08 757.1 564.43 760.28 566.09
+        C 766.06 569.1 771.37 573.12 775.9 577.79
+        C 780.54 582.56 784.37 588.02 787.63 593.93
+        C 789.39 597.13 790.99 600.47 791.85 603.87
+        C 792.27 605.55 792.52 607.24 793.23 609.04
+        C 793.9 610.76 794.99 612.58 796.06 612.65
+        C 797.25 612.74 798.4 610.64 799.12 608.7
+        C 799.87 606.68 800.16 604.82 800.66 602.99
+        C 801.58 599.67 803.21 596.43 804.91 593.26
+        C 808.02 587.45 811.35 581.85 815.83 577.14
+        C 820.42 572.33 826.21 568.44 832.03 565.51
+        C 835.15 563.93 838.27 562.63 842.02 561.73
+        C 845.92 560.8 850.49 560.31 850.63 557.2
+        C 850.68 556.22 850.28 554.97 849.3 554.44
+        C 848.49 554.01 847.28 554.06 846.19 553.97
+        C 844.19 553.82 842.58 553.22 840.95 552.6
+        C 837.66 551.35 834.27 550.05 831.06 548.39
+        C 825.37 545.45 820.28 541.38 815.93 536.7
+        C 811.31 531.73 807.53 526.07 804.35 520.04
+        C 802.66 516.82 801.13 513.5 800.3 510.05
+        C 799.89 508.35 799.64 506.63 798.84 504.91
+        C 798.15 503.41 797.04 501.92 796.07 501.97
+        Z
+        M 713.4 619.01
+        C 711.86 619.97 711.65 623.27 711.08 625.96
+        C 710.57 628.32 709.79 630.21 708.84 632.12
+        C 707.07 635.66 704.71 639.25 701.69 642.07
+        C 698.6 644.94 694.83 647 690.98 648.49
+        C 688.75 649.36 686.49 650.04 683.88 650.59
+        C 682.75 650.83 681.56 651.04 681.01 651.61
+        C 680.38 652.27 680.62 653.41 681.28 654.22
+        C 682.58 655.82 685.49 656.14 688.02 656.73
+        C 690.33 657.27 692.32 658.04 694.24 659.05
+        C 697.81 660.94 701.1 663.67 703.74 666.9
+        C 706.38 670.13 708.37 673.87 709.9 677.68
+        C 710.73 679.75 711.43 681.84 712.22 684.18
+        C 712.6 685.32 713 686.51 713.63 686.87
+        C 714.21 687.2 714.97 686.81 715.54 686.18
+        C 716.93 684.62 717.04 681.55 717.67 678.97
+        C 718.24 676.68 719.2 674.77 720.33 672.91
+        C 722.38 669.5 724.94 666.25 728.02 663.57
+        C 731.23 660.79 735 658.62 738.91 657.23
+        C 741.12 656.45 743.38 655.91 745.83 655.04
+        C 746.89 654.66 747.98 654.22 748.48 653.6
+        C 748.82 653.17 748.89 652.65 748.65 652.2
+        C 748.19 651.32 746.57 650.7 745.09 650.35
+        C 743.98 650.09 742.95 649.99 741.95 649.78
+        C 739.56 649.3 737.31 648.28 735.13 647.12
+        C 731.59 645.22 728.24 642.94 725.53 640
+        C 722.72 636.96 720.58 633.21 718.99 629.49
+        C 718.12 627.42 717.41 625.36 716.9 622.85
+        C 716.64 621.55 716.43 620.12 715.81 619.37
+        C 715.18 618.62 714.14 618.55 713.4 619.01
+        Z"/>
+    <radialGradient id="upper-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(620 0 0 425 420 310)">
+      <stop offset="0" stop-color="#45536e" stop-opacity="0.75"/>
+      <stop offset="0.18" stop-color="#45536e" stop-opacity="0.7"/>
+      <stop offset="0.34" stop-color="#45536e" stop-opacity="0.58"/>
+      <stop offset="0.5" stop-color="#45536e" stop-opacity="0.41"/>
+      <stop offset="0.67" stop-color="#45536e" stop-opacity="0.22"/>
+      <stop offset="0.84" stop-color="#45536e" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#45536e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="left-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(400 0 0 220 375 440)">
+      <stop offset="0" stop-color="#334059" stop-opacity="0.45"/>
+      <stop offset="0.18" stop-color="#334059" stop-opacity="0.42"/>
+      <stop offset="0.34" stop-color="#334059" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#334059" stop-opacity="0.24"/>
+      <stop offset="0.67" stop-color="#334059" stop-opacity="0.14"/>
+      <stop offset="0.84" stop-color="#334059" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#334059" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="right-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(353 0 0 370 920 670)">
+      <stop offset="0" stop-color="#354664" stop-opacity="0.55"/>
+      <stop offset="0.18" stop-color="#354664" stop-opacity="0.52"/>
+      <stop offset="0.34" stop-color="#354664" stop-opacity="0.43"/>
+      <stop offset="0.5" stop-color="#354664" stop-opacity="0.3"/>
+      <stop offset="0.67" stop-color="#354664" stop-opacity="0.17"/>
+      <stop offset="0.84" stop-color="#354664" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#354664" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cross-shadow" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(410 0 0 356 330 890)">
+      <stop offset="0" stop-color="#1d2c4b" stop-opacity="0.5"/>
+      <stop offset="0.18" stop-color="#1d2c4b" stop-opacity="0.47"/>
+      <stop offset="0.34" stop-color="#1d2c4b" stop-opacity="0.39"/>
+      <stop offset="0.5" stop-color="#1d2c4b" stop-opacity="0.27"/>
+      <stop offset="0.67" stop-color="#1d2c4b" stop-opacity="0.15"/>
+      <stop offset="0.84" stop-color="#1d2c4b" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#1d2c4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="center-shadow" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(350 0 0 325 575 840)">
+      <stop offset="0" stop-color="#202a41" stop-opacity="0.65"/>
+      <stop offset="0.18" stop-color="#202a41" stop-opacity="0.61"/>
+      <stop offset="0.34" stop-color="#202a41" stop-opacity="0.51"/>
+      <stop offset="0.5" stop-color="#202a41" stop-opacity="0.35"/>
+      <stop offset="0.67" stop-color="#202a41" stop-opacity="0.2"/>
+      <stop offset="0.84" stop-color="#202a41" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#202a41" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="deep-blue" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(310 0 0 230 820 462)">
+      <stop offset="0" stop-color="#1f2b44" stop-opacity="0.55"/>
+      <stop offset="0.18" stop-color="#1f2b44" stop-opacity="0.52"/>
+      <stop offset="0.34" stop-color="#1f2b44" stop-opacity="0.43"/>
+      <stop offset="0.5" stop-color="#1f2b44" stop-opacity="0.3"/>
+      <stop offset="0.67" stop-color="#1f2b44" stop-opacity="0.17"/>
+      <stop offset="0.84" stop-color="#1f2b44" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#1f2b44" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lower-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1"
+      gradientTransform="matrix(615 0 0 135 615 982)">
+      <stop offset="0" stop-color="#253352" stop-opacity="0.56"/>
+      <stop offset="0.18" stop-color="#253352" stop-opacity="0.53"/>
+      <stop offset="0.34" stop-color="#253352" stop-opacity="0.44"/>
+      <stop offset="0.5" stop-color="#253352" stop-opacity="0.3"/>
+      <stop offset="0.67" stop-color="#253352" stop-opacity="0.17"/>
+      <stop offset="0.84" stop-color="#253352" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#253352" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim-blue" gradientUnits="userSpaceOnUse" x1="430" y1="200" x2="801" y2="914">
+      <stop offset="0" stop-color="#789dff"/>
+      <stop offset=".24" stop-color="#7baaff"/>
+      <stop offset=".48" stop-color="#719df8"/>
+      <stop offset=".73" stop-color="#6b95d9"/>
+      <stop offset="1" stop-color="#6f9acb"/>
+    </linearGradient>
+    <linearGradient id="rim-highlight" gradientUnits="userSpaceOnUse" x1="431" y1="209" x2="802" y2="913">
+      <stop offset="0" stop-color="#fcffff"/>
+      <stop offset=".20" stop-color="#f2faff"/>
+      <stop offset=".36" stop-color="#c0dcff"/>
+      <stop offset=".52" stop-color="#769ff4"/>
+      <stop offset="1" stop-color="#7ba3d9"/>
+    </linearGradient>
+    <linearGradient id="rim-intensity" gradientUnits="userSpaceOnUse" x1="418" y1="224" x2="753" y2="930">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".18" stop-color="#fff" stop-opacity=".97"/>
+      <stop offset=".36" stop-color="#fff" stop-opacity=".51"/>
+      <stop offset=".62" stop-color="#fff" stop-opacity=".29"/>
+      <stop offset=".81" stop-color="#fff" stop-opacity=".21"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".27"/>
+    </linearGradient>
+    <mask id="rim-light-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254">
+      <rect width="1254" height="1254" fill="url(#rim-intensity)"/>
+    </mask>
+    <filter id="soft-rim-light" x="-.1" y="-.1" width="1.2" height="1.2" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="7.2"/>
+    </filter>
+    <filter id="mid-rim-light" x="-.1" y="-.1" width="1.2" height="1.2" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.7"/>
+    </filter>
+    <filter id="fine-rim-light" x="-.1" y="-.1" width="1.2" height="1.2" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation=".8"/>
+    </filter>
+    <linearGradient id="cyan-v" gradientUnits="userSpaceOnUse" x1="655" y1="478" x2="611" y2="907">
+      <stop offset="0" stop-color="#00d7fe"/>
+      <stop offset=".29" stop-color="#00dafe"/>
+      <stop offset="1" stop-color="#00d6fd"/>
+    </linearGradient>
+    <radialGradient id="v-edge-light" gradientUnits="userSpaceOnUse" cx="261" cy="559" r="69">
+      <stop offset="0" stop-color="#00ffee" stop-opacity=".68"/>
+      <stop offset=".47" stop-color="#00ffee" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#00ffee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spark-color" gradientUnits="userSpaceOnUse" x1="884" y1="386" x2="956" y2="486">
+      <stop offset="0" stop-color="#a3fcfc"/>
+      <stop offset="1" stop-color="#9dfcfc"/>
+    </linearGradient>
+  </defs>
+  <g id="graphite-puck" clip-path="url(#puck-clip)">
+    <rect width="1254" height="1254" fill="#26324b"/>
+    <rect width="1254" height="1254" fill="url(#upper-light)"/>
+    <rect width="1254" height="1254" fill="url(#left-reflection)"/>
+    <rect width="1254" height="1254" fill="url(#right-reflection)"/>
+    <rect width="1254" height="1254" fill="url(#cross-shadow)"/>
+    <rect width="1254" height="1254" fill="url(#center-shadow)"/>
+    <rect width="1254" height="1254" fill="url(#deep-blue)"/>
+    <rect width="1254" height="1254" fill="url(#lower-reflection)"/>
+    <g id="rim-light" mask="url(#rim-light-mask)">
+      <use xlink:href="#puck-outline" fill="none" stroke="url(#rim-blue)" stroke-width="22"
+           opacity=".58" filter="url(#soft-rim-light)"/>
+      <use xlink:href="#puck-outline" fill="none" stroke="url(#rim-blue)" stroke-width="8.3"
+           transform="translate(626.5 618.2) scale(.9905) translate(-626.5 -618.2)"
+           opacity=".8" filter="url(#mid-rim-light)"/>
+      <use xlink:href="#puck-outline" fill="none" stroke="url(#rim-highlight)" stroke-width="3.9"
+           transform="translate(626.5 618.2) scale(.9971) translate(-626.5 -618.2)"
+           opacity=".98" filter="url(#fine-rim-light)"/>
+    </g>
+    <g id="valrove-v">
+      <use xlink:href="#v-outline" fill="url(#cyan-v)"/>
+      <use xlink:href="#v-outline" fill="url(#v-edge-light)"/>
+    </g>
+  </g>
+  <path id="rim-sparkle" fill="url(#spark-color)"
+    d="M 914.96 375.52
+        C 915.61 375.16 916.37 374.95 917 375.21
+        C 917.81 375.54 918.41 376.61 918.86 377.73
+        C 919.55 379.45 919.91 381.26 920.38 383
+        C 921.42 386.89 922.98 390.43 924.74 393.91
+        C 927.97 400.34 931.86 406.59 936.83 411.86
+        C 941.73 417.05 947.68 421.29 953.66 424.97
+        C 956.84 426.93 960.03 428.72 963.82 429.94
+        C 967.68 431.18 972.16 431.83 973.97 434.54
+        C 974.59 435.45 974.89 436.6 974.31 437.46
+        C 973.86 438.14 972.84 438.64 971.81 439.03
+        C 969.87 439.76 967.88 440.1 965.98 440.62
+        C 962.3 441.64 958.98 443.31 955.72 445.17
+        C 949.52 448.71 943.52 452.89 938.47 457.97
+        C 933.46 463 929.37 468.9 925.89 475.15
+        C 923.96 478.59 922.22 482.14 921.18 485.86
+        C 920.7 487.56 920.37 489.29 919.6 491.06
+        C 918.75 493.02 917.36 495.03 915.94 495.07
+        C 914.71 495.1 913.46 493.65 912.67 492.06
+        C 911.74 490.21 911.44 488.16 910.93 486.21
+        C 909.99 482.59 908.34 479.27 906.55 476
+        C 903.08 469.64 899.11 463.49 894.11 458.31
+        C 889.17 453.18 883.24 449 877.03 445.44
+        C 873.79 443.58 870.47 441.89 866.91 440.94
+        C 864.72 440.36 862.44 440.06 860.24 439.07
+        C 858.54 438.32 856.89 437.16 856.78 435.94
+        C 856.65 434.47 858.77 432.91 860.86 432.02
+        C 862.62 431.27 864.35 430.98 866.04 430.52
+        C 869.58 429.55 872.92 427.78 876.17 425.89
+        C 882.45 422.25 888.42 418.17 893.51 413.05
+        C 898.56 407.96 902.74 401.84 906.02 395.62
+        C 907.77 392.3 909.27 388.95 910.41 385.05
+        C 911.52 381.3 912.3 377.03 914.96 375.52
+        Z"/>
+</svg>
