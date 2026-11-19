@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/cleanup/robot_files.dart';
 import '../../core/persistence/stores.dart';
 import '../../state/cleanup.dart' show historyDirectory;
+import '../../state/demo_robot.dart';
 import '../cleanup/cleanup_service.dart';
 import 'assistant_actions.dart';
 
@@ -20,6 +21,7 @@ Future<void> assistantMain() async {
   final prefs = await SharedPreferences.getInstance();
   final actions = AssistantActions(
     prefs: prefs,
+    connect: connectRobot,
     secrets: SecureSecretStore(),
     files: () async => RobotFiles(await historyDirectory()),
     onCleaningStarted: (robotId) async {

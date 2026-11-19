@@ -17,6 +17,7 @@ import '../../core/valetudo/capabilities.dart';
 import '../../core/valetudo/client/valetudo_client.dart';
 import '../../core/valetudo/models/models.dart';
 import '../../state/cleanup.dart';
+import '../../state/demo_robot.dart';
 import 'cleanup_extras.dart';
 
 /// Follows a cleanup in an Android foreground service, so the live
@@ -45,6 +46,8 @@ abstract final class CleanupService {
   /// ([askPermission] false) a missing notification permission is not asked
   /// for.
   static Future<void> start(String robotId, {bool askPermission = true}) async {
+    // The demo robot only exists in the app, which records its cleanups.
+    if (robotId == demoRobotId) return;
     if (!supported || await FlutterForegroundTask.isRunningService) return;
     final permission =
         await FlutterForegroundTask.checkNotificationPermission();

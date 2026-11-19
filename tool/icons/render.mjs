@@ -77,6 +77,9 @@ write('assets/icon/android_legacy.png', render(framed(source, art.cx, art.cy, (a
 // iOS: opaque tile, the puck at 80% of it; iOS rounds the corners itself.
 write('assets/icon/ios.png', render(framed(source, art.cx, art.cy, art.side / 0.8), 1024, TILE));
 
+// Google Play listing: the same tile at 512px; Play rounds the corners itself.
+write('docs/play-store/icon-512.png', render(framed(source, art.cx, art.cy, art.side / 0.8), 512, TILE));
+
 // Android 13+ themed icon: the V and the sparkle as a silhouette (the system
 // tints it), 50dp wide on the 108dp canvas, centred.
 const pathData = (id) => {

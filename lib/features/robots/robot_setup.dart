@@ -7,6 +7,7 @@ import '../../core/valetudo/client/valetudo_client.dart';
 import '../../core/valetudo/models/models.dart';
 import '../../state/app_state.dart';
 import '../../state/commands.dart';
+import '../../state/demo_robot.dart';
 import '../../ui/glass.dart';
 import '../../ui/glyphs.dart';
 import '../../ui/theme.dart';
@@ -357,11 +358,11 @@ class _RobotSetupViewState extends ConsumerState<RobotSetupView> {
 }
 
 /// First-run screen: no robot configured yet.
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends ConsumerWidget {
   const OnboardingScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final media = MediaQuery.of(context);
     return Scaffold(
       body: AmbientBackground(
@@ -409,7 +410,17 @@ class OnboardingScreen extends StatelessWidget {
               padding: const EdgeInsets.all(18),
               child: const RobotSetupView(),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 12),
+            Center(
+              child: TextButton.icon(
+                onPressed: () => ref
+                    .read(robotsProvider.notifier)
+                    .upsert(demoRobotProfile()),
+                icon: const Icon(Icons.play_circle_outline_rounded),
+                label: const Text('No robot at hand? Try the demo'),
+              ),
+            ),
+            const SizedBox(height: 12),
             Text(
               'Your phone needs to be on the same network as the robot. Credentials are stored in the device keystore.',
               textAlign: TextAlign.center,

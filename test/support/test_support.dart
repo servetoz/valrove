@@ -22,12 +22,11 @@ Future<void> loadAppFonts() async {
   await icons.load();
 }
 
-/// Reads a captured API response from `test/fixtures/<robot>/<name>.json`.
-String fixtureText(String name, {String robot = 'l40'}) =>
-    File('test/fixtures/$robot/$name.json').readAsStringSync();
+/// Reads a captured API response from `assets/demo/<name>.json`.
+String fixtureText(String name) =>
+    File('assets/demo/$name.json').readAsStringSync();
 
-Object? fixtureJson(String name, {String robot = 'l40'}) =>
-    jsonDecode(fixtureText(name, robot: robot));
+Object? fixtureJson(String name) => jsonDecode(fixtureText(name));
 
 /// Runs [body] with a phone-sized surface.
 Future<void> withPhoneSurface(

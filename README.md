@@ -52,7 +52,8 @@ cloud in between.
 - **Looks good doing it.** Light and OLED-black dark themes that tint themselves to what the
   robot is doing, with haptic feedback throughout.
 - **Private by design.** No cloud, no account, no analytics. Valrove connects only to
-  your robot. (Voice commands use your phone's own speech recognition.)
+  your robot. (Voice commands use your phone's own speech recognition.) See the
+  [privacy policy](PRIVACY.md).
 
 ## Download
 
@@ -67,6 +68,9 @@ You need:
 
 Valrove finds Valetudo robots on your network by itself, or you enter the robot's address.
 Several robots are supported.
+
+No Valetudo robot yet? Tap **Try the demo** on the first screen to look around with a
+pretend robot.
 
 ## Support Valrove
 
@@ -112,7 +116,7 @@ do doesn't appear.
   network advertisement. New robots still in access-point mode get a Wi-Fi provisioning flow.
 - **System**: Valetudo options, updater, live log with log level, system information,
   help, and about (versions, licenses, API docs link).
-- **App**: several robots, mDNS discovery (`_valetudo._tcp`), credentials in platform
+- **App**: several robots, a demo robot for trying the app without one, mDNS discovery (`_valetudo._tcp`), credentials in platform
   secure storage, light/dark/system theme, and haptics.
 
 Beyond the web interface:
@@ -187,8 +191,9 @@ flutter build appbundle --release --dart-define=STORE=play  # for Play Store upl
 under About and the links for supporting Valetudo (the donation popup stays). Builds without
 it have all of them.
 
-Release builds are signed with the debug key (the Flutter template default in
-`android/app/build.gradle.kts`) until you configure your own keystore.
+Release builds are signed with the upload key that `android/key.properties` points to.
+That file and the keystore stay out of git; without them, release builds use the debug
+key. `docs/play-store/README.md` has everything for the Google Play listing.
 
 Split APKs get per-ABI version codes (arm64 is 2000 + the build number), while the
 universal `app-release.apk` uses the plain build number. Android refuses a lower version
@@ -211,7 +216,8 @@ flutter test --update-goldens test/visual     # after intentional visual changes
   decode (luma PSNR > 48 dB).
 - `test/visual`: golden screenshots of the map renderer and of the main screens in both
   themes, rendered with the real fonts.
-- `test/widget`: user flows against recorded robot responses (`test/fixtures/l40`), such
+- `test/widget`: user flows against recorded robot responses (`assets/demo`, which is
+  also the app's demo robot), such
   as selecting rooms and cleaning them, drawing and cleaning a zone, basic controls,
   manual control, room renaming, presets (one tap, saving, widget/tile/shortcut links,
   settings per room run step by step), recording a cleanup into the history, typed and
@@ -308,6 +314,9 @@ lib/
 Run `dart format` on the generated Dart files afterwards.
 
 The screenshots in `docs/screenshots` are copies of the golden images in `test/goldens`.
+The Google Play images in `docs/play-store` come from
+`flutter test test/store --update-goldens --dart-define=STORE_ASSETS=true` (the icon from
+`tool/icons/render.mjs`).
 
 ## License
 

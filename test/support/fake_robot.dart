@@ -14,12 +14,10 @@ import 'package:valrove/state/cleanup.dart';
 import 'package:valrove/state/session.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Serves recorded API responses from `test/fixtures/<robot>/` and records
-/// every request. SSE endpoints stay open without emitting events.
+/// Serves the recorded API responses in `assets/demo` (also the app's demo
+/// robot) and records every request. SSE endpoints stay open without emitting events.
 class FixtureHttpClient extends http.BaseClient {
-  FixtureHttpClient({this.robot = 'l40', this.overrides = const {}});
-
-  final String robot;
+  FixtureHttpClient({this.overrides = const {}});
 
   /// Path (without `/api/v2/`) → JSON body overriding the fixture file.
   final Map<String, Object?> overrides;
@@ -50,9 +48,7 @@ class FixtureHttpClient extends http.BaseClient {
     if (overrides.containsKey(path)) {
       body = jsonEncode(overrides[path]);
     } else {
-      final file = File(
-        'test/fixtures/$robot/${path.replaceAll('/', '__')}.json',
-      );
+      final file = File('assets/demo/${path.replaceAll('/', '__')}.json');
       if (file.existsSync()) body = file.readAsStringSync();
     }
     if (body == null) {

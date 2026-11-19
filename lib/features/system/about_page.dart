@@ -151,6 +151,14 @@ class AboutPage extends ConsumerWidget {
                 applicationVersion: app?.version,
               ),
             ),
+            NavTile(
+              title: 'Privacy policy',
+              subtitle: 'What Valrove does with your data',
+              icon: Icons.privacy_tip_rounded,
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const PrivacyPolicyPage()),
+              ),
+            ),
           ],
         ),
       ],
@@ -239,6 +247,50 @@ class _ValroveLicensePageState extends State<ValroveLicensePage> {
                   ],
                 ),
               ),
+            );
+          },
+        ),
+      ],
+    );
+  }
+}
+
+/// Valrove's privacy policy, the PRIVACY.md file.
+class PrivacyPolicyPage extends StatefulWidget {
+  const PrivacyPolicyPage({super.key});
+
+  @override
+  State<PrivacyPolicyPage> createState() => _PrivacyPolicyPageState();
+}
+
+class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
+  late final Future<String> _text = rootBundle.loadString('PRIVACY.md');
+
+  @override
+  Widget build(BuildContext context) {
+    return ValrovePage(
+      title: 'Privacy policy',
+      children: [
+        FutureBuilder<String>(
+          future: _text,
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return Text(
+                "Couldn't load the privacy policy.",
+                style: context.text.bodySmall,
+              );
+            }
+            final text = snapshot.data;
+            if (text == null) {
+              return const Padding(
+                padding: EdgeInsets.all(32),
+                child: Center(child: CircularProgressIndicator()),
+              );
+            }
+            return ValroveCard(
+              padding: const EdgeInsets.all(16),
+              // The page title stands in for the document's own.
+              child: MarkdownText(text.replaceFirst(RegExp(r'^# .*\n+'), '')),
             );
           },
         ),

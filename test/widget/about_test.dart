@@ -46,4 +46,28 @@ void main() {
       expect(text(valroveCopyright), findsOneWidget);
     });
   });
+
+  testWidgets('About has the privacy policy', (tester) async {
+    await withPhoneSurface(tester, () async {
+      final scope = await fakeRobotOverrides(FixtureHttpClient());
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: scope,
+          child: MaterialApp(theme: AppTheme.light(), home: const AboutPage()),
+        ),
+      );
+      await settle(tester);
+      final privacy = find.text('Privacy policy');
+      // Built first, then scrolled fully onto the screen.
+      await tester.scrollUntilVisible(privacy, 300);
+      await tester.ensureVisible(privacy);
+      await settle(tester, rounds: 3);
+      await tester.tap(privacy);
+      await settle(tester);
+      expect(
+        text('Valrove does not collect any personal data'),
+        findsOneWidget,
+      );
+    });
+  });
 }

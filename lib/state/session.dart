@@ -11,12 +11,12 @@ import '../map/processing/map_palette.dart';
 import '../map/processing/map_processor.dart';
 import '../map/render/map_scene.dart';
 import 'app_state.dart';
+import 'demo_robot.dart';
 
-/// Creates clients; overridden in tests to serve recorded responses.
+/// Creates clients (for the demo robot too); overridden in tests to serve
+/// recorded responses.
 final clientFactoryProvider =
-    Provider<ValetudoClient Function(ValetudoEndpoint)>(
-      (ref) => ValetudoClient.connect,
-    );
+    Provider<ValetudoClient Function(ValetudoEndpoint)>((ref) => connectRobot);
 
 /// Client for the active robot (null when no robot is configured).
 final clientProvider = Provider<ValetudoClient?>((ref) {

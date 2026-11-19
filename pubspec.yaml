@@ -2,7 +2,7 @@ name: valrove
 description: "A spatial, map-first controller for Valetudo-powered robot vacuums."
 publish_to: 'none'
 
-version: 1.0.1+2
+version: 1.1.0+3
 
 environment:
   sdk: ^3.14.0
@@ -46,8 +46,11 @@ flutter:
   assets:
     - assets/brand/
     - assets/licenses/
-    # Valrove's own license, shown on the About page.
+    # Recorded responses of a Dreame L40 Ultra: the demo robot (and the tests).
+    - assets/demo/
+    # Valrove's own license and privacy policy, shown on the About page.
     - LICENSE
+    - PRIVACY.md
 
   fonts:
     - family: Inter

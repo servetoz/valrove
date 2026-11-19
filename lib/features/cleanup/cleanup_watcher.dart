@@ -12,6 +12,7 @@ import '../../core/valetudo/capabilities.dart';
 import '../../core/valetudo/models/models.dart';
 import '../../state/app_state.dart';
 import '../../state/cleanup.dart';
+import '../../state/demo_robot.dart';
 import '../../state/session.dart';
 import '../../state/toasts.dart';
 import 'cleanup_extras.dart';
@@ -75,7 +76,9 @@ class CleanupWatcher {
   Future<void> _onState(RobotState state) async {
     final robot = _ref.read(activeProfileProvider);
     if (robot == null || !state.hasStatus) return;
-    if (_useService) {
+    // The service can't reach the demo robot, so the app records its
+    // cleanups itself.
+    if (_useService && !isDemoRobot(robot)) {
       _stopRecording();
       if (state.job != JobState.none && !_starting) {
         _starting = true;

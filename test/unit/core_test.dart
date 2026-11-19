@@ -174,7 +174,7 @@ void main() {
 
   group('Fixtures from a real robot', () {
     test('every captured response parses', () {
-      final dir = Directory('test/fixtures/l40');
+      final dir = Directory('assets/demo');
       for (final file in dir.listSync().whereType<File>()) {
         expect(
           () => jsonDecode(file.readAsStringSync()),
