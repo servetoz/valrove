@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/help_texts.dart';
 import '../../core/licenses.dart';
+import '../../core/store.dart';
 import '../../core/support_copy.dart';
 import '../../state/app_state.dart';
 import '../../state/session.dart';
@@ -106,13 +107,14 @@ class AboutPage extends ConsumerWidget {
               icon: Icons.code_rounded,
               onTap: () => _open('https://github.com/Hypfer/Valetudo'),
             ),
-            NavTile(
-              title: SupportCopy.valetudoHeading,
-              subtitle: SupportCopy.valetudoAboutSubtitle,
-              icon: Icons.favorite_rounded,
-              iconColor: const Color(0xFFF472B6),
-              onTap: () => _open(SupportCopy.valetudoUrl),
-            ),
+            if (!playStoreBuild)
+              NavTile(
+                title: SupportCopy.valetudoHeading,
+                subtitle: SupportCopy.valetudoAboutSubtitle,
+                icon: Icons.favorite_rounded,
+                iconColor: const Color(0xFFF472B6),
+                onTap: () => _open(SupportCopy.valetudoUrl),
+              ),
             NavTile(
               title: 'Analytics',
               subtitle: 'Learn how your data is used',

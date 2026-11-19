@@ -1,13 +1,90 @@
-# Valrove
+<p align="center">
+  <img src="assets/brand/3.0x/logo.png" width="112" alt="Valrove logo">
+</p>
 
-A map-first Flutter app for robot vacuums running [Valetudo](https://valetudo.cloud).
-It talks to the robot's local REST API (v2) and live event streams directly: no cloud, no account.
+<h1 align="center">Valrove</h1>
 
-The live map fills the screen. Translucent glass controls float above it, and a bottom
-sheet slides up from quick actions to detailed controls. Light and OLED-black dark
-themes tint themselves to the robot's state (cleaning, charging, docked, returning, error).
+<p align="center">
+  <strong>The app your Valetudo robot deserves.</strong><br>
+  Map-first, fast and cloud-free. No account, no ads, no tracking.
+</p>
 
-## Features
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?logo=android&logoColor=white" alt="Android 7.0+">
+  <img src="https://img.shields.io/badge/Flutter-3.50-02569B?logo=flutter&logoColor=white" alt="Flutter 3.50">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue" alt="Apache 2.0 license"></a>
+  <a href="https://ko-fi.com/valrove"><img src="https://img.shields.io/badge/Ko--fi-Support%20Valrove-FF5E5B?logo=ko-fi&logoColor=white" alt="Support Valrove on Ko-fi"></a>
+</p>
+
+---
+
+**Is Valetudo's web UI too plain or too dated for you?** You freed your robot from the
+cloud, and now you control it through a web page in your phone's browser. Valrove turns
+that into a real app: your home's live map fills the screen, glass controls float above
+it, and everything Valetudo can do is a tap away.
+
+It talks to your robot directly on your own network, through Valetudo's local API. No
+cloud in between.
+
+<p align="center">
+  <img src="docs/screenshots/map-cleaning.png" width="200" alt="Live map while cleaning">
+  <img src="docs/screenshots/controls.png" width="200" alt="Cleaning controls and dock status">
+  <img src="docs/screenshots/map-light.png" width="200" alt="Light theme">
+  <img src="docs/screenshots/settings.png" width="200" alt="Settings">
+</p>
+
+## Why Valrove
+
+- **The map comes first.** A live, smooth map with the robot gliding along its cleaning
+  path. Tap rooms to clean them, draw zones, or send the robot anywhere.
+- **Everything the web UI does.** Rooms, zones, schedules, consumables, map editing,
+  virtual walls, dock controls, Wi-Fi, MQTT, updates, logs and more. Valrove reads what your
+  robot supports and shows exactly that.
+- **One-tap cleanups.** Save rooms, order and settings as presets, then start them from the
+  app, a home screen widget, a quick settings tile or an app shortcut.
+- **Know what's going on.** A live notification while the robot cleans, with Pause and Dock
+  buttons, plus alerts when it's done, stuck, or the bin is full.
+- **Talk to it.** "Clean the kitchen and the hallway twice" or "go back to the dock", in
+  English or German.
+- **It learns your home.** Time and battery estimates before you start, a cleaning
+  history, a map of when each room was last cleaned, Wi-Fi coverage, and a forecast of
+  when brushes and filters will wear out.
+- **Looks good doing it.** Light and OLED-black dark themes that tint themselves to what the
+  robot is doing, with haptic feedback throughout.
+- **Private by design.** No cloud, no account, no analytics. Valrove connects only to
+  your robot. (Voice commands use your phone's own speech recognition.)
+
+## Download
+
+Get the latest APK from the [Releases](../../releases) page. Most phones need
+`app-arm64-v8a-release.apk`.
+
+You need:
+
+- an Android phone with Android 7.0 or newer,
+- a robot vacuum running [Valetudo](https://valetudo.cloud),
+- the phone on the same network as the robot.
+
+Valrove finds Valetudo robots on your network by itself, or you enter the robot's address.
+Several robots are supported.
+
+## Support Valrove
+
+Valrove is free, with no ads and no tracking. If it makes your robot more fun to use:
+
+- ☕ [Buy me a coffee on Ko-fi](https://ko-fi.com/valrove)
+- ⭐ Star this repository and tell other Valetudo users about it
+- 🐞 Report bugs and ideas in [Issues](../../issues)
+
+## Thanks to Valetudo
+
+Valrove would not exist without [Valetudo](https://valetudo.cloud) by Sören Beye and its
+contributors, which frees robot vacuums from the cloud in the first place. Valrove is an
+independent app and is not affiliated with or endorsed by the Valetudo project.
+
+---
+
+## All features
 
 The goal is parity with the user-facing features of Valetudo's web interface. Every
 screen is driven by the capabilities the robot reports, so anything the robot can't
@@ -89,22 +166,15 @@ Beyond the web interface:
 - Android 7.0+ (API 24). The iOS project is included but has not been built (that
   needs macOS).
 
+### Not included
+
+- The web interface's easter eggs (the ELIZA chat, the April Fools activation page,
+  Konami code effects).
+- Robots with more than one battery show only the first one.
+
 ## Building
 
-Toolchain used in this environment (WSL2, Ubuntu 24.04):
-
-| Tool | Location |
-| --- | --- |
-| Flutter 3.50.0 / Dart 3.14.0 | `~/development/flutter` |
-| Android SDK (platform 36, build-tools 36.0.0, NDK 28.2) | `~/Android/Sdk` |
-| JDK 21 (Temurin) | `~/development/jdk-21.0.13+9`, registered with `flutter config --jdk-dir` |
-
-To use Flutter from any shell, add this to `~/.zshrc`:
-
-```sh
-export PATH="$HOME/development/flutter/bin:$PATH"
-export ANDROID_HOME="$HOME/Android/Sdk"
-```
+You need Flutter 3.50 (Dart 3.14), the Android SDK with platform 36 and JDK 21.
 
 ```sh
 flutter pub get
@@ -114,24 +184,24 @@ flutter build appbundle --release --dart-define=STORE=play  # for Play Store upl
 ```
 
 `--dart-define=STORE=play` builds the Google Play version, which leaves out the Donate page
-under About (the donation popup stays). Builds without it have both.
+under About and the links for supporting Valetudo (the donation popup stays). Builds without
+it have all of them.
 
-Release builds are still signed with the debug key (the Flutter template default in
-`android/app/build.gradle.kts`). Configure your own keystore before you distribute the app.
+Release builds are signed with the debug key (the Flutter template default in
+`android/app/build.gradle.kts`) until you configure your own keystore.
 
 Split APKs get per-ABI version codes (arm64 is 2000 + the build number), while the
 universal `app-release.apk` uses the plain build number. Android refuses a lower version
 code than the installed one, so don't switch a device from a split APK to the universal one.
 
-The Android application ID and iOS bundle ID are `dev.valroveapp.valrove`. Changing them
-later makes Android and iOS treat the app as a different one (no update path, saved robots
-are not carried over), so settle them before the first public release.
+The Android application ID and iOS bundle ID are `dev.valroveapp.valrove`.
 
 ## Tests
 
 ```sh
 flutter analyze
 flutter test                                  # unit, golden and widget interaction tests
+flutter test --dart-define=STORE=play         # the same against the Google Play version
 flutter test --update-goldens test/visual     # after intentional visual changes
 ```
 
@@ -145,8 +215,8 @@ flutter test --update-goldens test/visual     # after intentional visual changes
   as selecting rooms and cleaning them, drawing and cleaning a zone, basic controls,
   manual control, room renaming, presets (one tap, saving, widget/tile/shortcut links,
   settings per room run step by step), recording a cleanup into the history, typed and
-  linked voice commands, Wi-Fi coverage, lost & found and consumable forecasts. The tests check the exact API payloads
-  that are sent.
+  linked voice commands, Wi-Fi coverage, lost & found and consumable forecasts. The tests
+  check the exact API payloads that are sent.
 - `test/live`: an end-to-end smoke test against a real robot. It is skipped by default
   and only sends read-only requests.
 - `integration_test/perf_test.dart`: an on-device frame timing benchmark of the home
@@ -177,10 +247,10 @@ adb shell cmd app_function execute-app-function --package dev.valroveapp.valrove
 ```
 
 ```sh
-flutter test test/live --run-skipped --dart-define=ROBOT=192.168.1.122
+flutter test test/live --run-skipped --dart-define=ROBOT=<robot-ip>
 # screenshots: build/live_screenshots/home_{dark,light}.png
 
-dart run tool/probe_robot.dart 192.168.1.122 [sse-seconds]   # read-only API probe
+dart run tool/probe_robot.dart <robot-ip> [sse-seconds]   # read-only API probe
 ```
 
 ## Architecture
@@ -237,11 +307,7 @@ lib/
 
 Run `dart format` on the generated Dart files afterwards.
 
-## Not included
-
-- The web interface's easter eggs (the ELIZA chat, the April Fools activation page,
-  Konami code effects).
-- Robots with more than one battery show only the first one.
+The screenshots in `docs/screenshots` are copies of the golden images in `test/goldens`.
 
 ## License
 

@@ -4,8 +4,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:valrove/app.dart';
+import 'package:valrove/core/store.dart';
 import 'package:valrove/features/donate/donate.dart';
 import 'package:valrove/features/system/about_page.dart';
+import 'package:valrove/features/welcome/welcome_sheet.dart';
 import 'package:valrove/state/app_state.dart';
 import 'package:valrove/state/toasts.dart';
 import 'package:valrove/ui/theme.dart';
@@ -233,6 +235,41 @@ void main() {
       ).read(toastProvider).toasts;
       expect(toasts.single.message, "Couldn't open the browser");
       expect(toasts.single.detail, 'Donate at ko-fi.com/valrove');
+    });
+  });
+
+  testWidgets("the Play build leaves out the links for supporting Valetudo", (
+    tester,
+  ) async {
+    await withPhoneSurface(tester, () async {
+      final scope = await fakeRobotOverrides(FixtureHttpClient());
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: scope,
+          child: MaterialApp(theme: AppTheme.light(), home: const AboutPage()),
+        ),
+      );
+      await settle(tester);
+      await tester.scrollUntilVisible(find.text('Analytics'), 300);
+      expect(
+        find.text('Support Valetudo'),
+        playStoreBuild ? findsNothing : findsOneWidget,
+      );
+
+      // Valetudo's welcome sheet, shown for a new robot.
+      showWelcomeSheet(tester.element(find.byType(AboutPage)));
+      await settle(tester);
+      final end = find.textContaining('cloud-free robot', findRichText: true);
+      await tester.scrollUntilVisible(
+        end,
+        300,
+        scrollable: find.byType(Scrollable).last,
+      );
+      expect(end, findsOneWidget);
+      expect(
+        find.textContaining('consider donating', findRichText: true),
+        playStoreBuild ? findsNothing : findsOneWidget,
+      );
     });
   });
 }

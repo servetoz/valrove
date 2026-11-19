@@ -11,10 +11,6 @@ import '../../ui/haptics.dart';
 import '../../ui/theme.dart';
 import '../../ui/widgets.dart';
 
-/// Whether this is the Google Play build (`--dart-define=STORE=play`). It
-/// leaves out the Donate page under About; the donation popup stays.
-const playStoreBuild = String.fromEnvironment('STORE') == 'play';
-
 /// Color of the donation icons.
 const donateColor = Color(0xFFF472B6);
 

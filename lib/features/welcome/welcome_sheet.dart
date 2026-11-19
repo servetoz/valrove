@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 
+import '../../core/store.dart';
 import '../../core/support_copy.dart';
 import '../../core/valetudo/capabilities.dart';
 import '../../state/commands.dart';
@@ -36,12 +37,12 @@ For the initial mapping, please ensure that:
 With that done, here's what you'll need to let your robot create a new map:
 ''';
 
-final _outro =
-    '''
-While watching your robot zip around, you might want to [${SupportCopy.valetudoWelcomeLinkLabel}](${SupportCopy.valetudoUrl}) to the Valetudo project.
-
-Now, please enjoy your cloud-free robot :)
-''';
+final _outro = [
+  // Left out of the Play build, like the other support links.
+  if (!playStoreBuild)
+    'While watching your robot zip around, you might want to [${SupportCopy.valetudoWelcomeLinkLabel}](${SupportCopy.valetudoUrl}) to the Valetudo project.',
+  'Now, please enjoy your cloud-free robot :)',
+].join('\n\n');
 
 class _WelcomeSheet extends ConsumerStatefulWidget {
   const _WelcomeSheet();
